@@ -31,6 +31,9 @@ export default async function IndexPage() {
         primaryCtaLink={stackServerApp.urls.signUp}
         secondaryCtaText="GitHub"
         secondaryCtaLink="https://github.com/stack-auth/stack-template"
+        credits={<>
+          Built with ❤️ by{' '} <a href="https://stack-auth.com" target="_blank" rel="noreferrer" className="underline">Stack Auth</a>
+        </>}
       />
 
       <div id="features" />

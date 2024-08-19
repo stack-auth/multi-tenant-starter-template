@@ -7,13 +7,14 @@ export function Hero(props: {
   capsuleLink: string;
   title: string;
   subtitle: string;
+  credits?: React.ReactNode;
   primaryCtaText: string;
   primaryCtaLink: string;
   secondaryCtaText: string;
   secondaryCtaLink: string;
 }) {
   return (
-    <section className="space-y-6 py-32 md:py-48">
+    <section className="space-y-6 py-32 lg:py-44">
       <div className="container flex max-w-[64rem] flex-col items-center gap-4 text-center">
         <Link
           href={props.capsuleLink}
@@ -45,6 +46,10 @@ export function Hero(props: {
             {props.secondaryCtaText}
           </Link>
         </div>
+
+        {props.credits && (
+          <p className="text-sm text-muted-foreground mt-4">{props.credits}</p>
+        )}
       </div>
     </section>
   );

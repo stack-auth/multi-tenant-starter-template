@@ -112,7 +112,7 @@ export function LandingPageHeader(props: NavProps) {
   const [showMobileMenu, setShowMobileMenu] = React.useState<boolean>(false);
 
   return (
-    <header className="z-40 bg-background mx-4 md:mx-8">
+    <header className="fixed w-full z-50 bg-background/80 px-4 md:px-8 backdrop-blur">
       <div className="flex h-18 items-center justify-between py-4">
         <div className="flex items-center gap-4 md:gap-10">
           <Logo className="hidden md:flex" />
