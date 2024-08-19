@@ -1,6 +1,8 @@
 # Stack Template
 A minimalistic Next.js starter template. Minimum setup, modular design, bring your own backend and database.
 
+[Demo](https://stack-template.vercel.app/)
+
 ## Landing Page
 
 ![Landing Page](./assets/landing-page.png)
