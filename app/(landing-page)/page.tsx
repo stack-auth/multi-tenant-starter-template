@@ -28,9 +28,9 @@ export default async function IndexPage() {
         title="A Minimalistic Next.js Starter Template"
         subtitle="A full-stack template built with Next.js, Shadcn UI, and Stack Auth. Modern, modular, and open-source."
         primaryCtaText="Get Started"
-        primaryCtaLink="/docs"
+        primaryCtaLink={stackServerApp.urls.signUp}
         secondaryCtaText="GitHub"
-        secondaryCtaLink="#"
+        secondaryCtaLink="https://github.com/stack-auth/stack-template"
       />
 
       <div id="features" />
