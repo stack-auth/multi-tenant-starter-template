@@ -1,5 +1,6 @@
 # Stack Template
-A minimalistic Next.js starter template. Minimum setup, modular design, bring your own backend and database.
+
+A minimalistic Next.js starter template with minimal setup and a modular design. Bring your own backend and database.
 
 [Demo](https://stack-template.vercel.app/)
 
@@ -25,7 +26,7 @@ A minimalistic Next.js starter template. Minimum setup, modular design, bring yo
     pnpm install
     ```
 
-3. Register an account on [Stack Auth](https://stack-auth.com) and copy the keys from the dashboard and paste them in the `.env.local` file. Then enable "client team creation" on the team settings tab. 
+3. Register an account on [Stack Auth](https://stack-auth.com), copy the keys from the dashboard, and paste them into the `.env.local` file. Then, enable "client team creation" on the team settings tab.
 
     If you want to learn more about Stack Auth or self-host it, check out the [Docs](https://docs.stack-auth.com) and [GitHub](https://github.com/stack-auth/stack).
 
@@ -34,7 +35,6 @@ A minimalistic Next.js starter template. Minimum setup, modular design, bring yo
     ```bash
     pnpm dev 
     ```
-
 
 ## Features & Tech Stack
 
