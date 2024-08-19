@@ -15,6 +15,7 @@ interface NavProps {
     title: string;
     href: string;
     disabled?: boolean;
+    external?: boolean;
   }[];
 }
 
@@ -65,6 +66,8 @@ function MobileItems(props: NavProps) {
                 "flex w-full items-center rounded-md p-2 text-sm font-medium hover:underline",
                 item.disabled && "cursor-not-allowed opacity-60"
               )}
+              target={item.external ? "_blank" : undefined}
+              rel={item.external ? "noreferrer" : undefined}
             >
               {item.title}
             </Link>
@@ -95,6 +98,8 @@ function DesktopItems(props: NavProps) {
               : "text-foreground/60",
             item.disabled && "cursor-not-allowed opacity-80"
           )}
+          target={item.external ? "_blank" : undefined}
+          rel={item.external ? "noreferrer" : undefined}
         >
           {item.title}
         </Link>
