@@ -8,16 +8,18 @@ import { ComponentIcon, Users } from "lucide-react";
 export default async function IndexPage() {
   const project = await stackServerApp.getProject();
   if (!project.config.clientTeamCreationEnabled) {
-    return <div className="w-full min-h-96 flex items-center justify-center">
-      <div className="max-w-xl gap-4">
-        <p className="font-bold text-xl">
-          Setup Guide
-        </p>
-        <p className="">
-          {'This project requires client-side team creation to be enabled. Please enable it in the Stack Auth dashboard (Project > Team Settings). This message will disappear once the feature is enabled.'}
-        </p>
+    return (
+      <div className="w-full min-h-96 flex items-center justify-center">
+        <div className="max-w-xl gap-4">
+          <p className="font-bold text-xl">Setup Required</p>
+          <p className="">
+            {
+              "To start using this project, please enable client-side team creation in the Stack Auth dashboard (Project > Team Settings). This message will disappear once the feature is enabled."
+            }
+          </p>
+        </div>
       </div>
-    </div>
+    );
   }
 
   return (
@@ -26,20 +28,30 @@ export default async function IndexPage() {
         capsuleText="100% Open-source & Free"
         capsuleLink="https://stacktemplate.com"
         title="A Minimalistic Next.js Starter Template"
-        subtitle="A full-stack template built with Next.js, Shadcn UI, and Stack Auth. Modern, modular, and open-source."
+        subtitle="Built for developers, by developers. Next.js + Shadcn UI + Stack Auth."
         primaryCtaText="Get Started"
         primaryCtaLink={stackServerApp.urls.signUp}
         secondaryCtaText="GitHub"
         secondaryCtaLink="https://github.com/stack-auth/stack-template"
-        credits={<>
-          Built with ❤️ by{' '} <a href="https://stack-auth.com" target="_blank" rel="noreferrer" className="underline">Stack Auth</a>
-        </>}
+        credits={
+          <>
+            Crafted with ❤️ by{" "}
+            <a
+              href="https://stack-auth.com"
+              target="_blank"
+              rel="noreferrer"
+              className="underline"
+            >
+              Stack Auth
+            </a>
+          </>
+        }
       />
 
       <div id="features" />
       <FeatureGrid
         title="Features"
-        subtitle="A few of the things you can do with Stack Template."
+        subtitle="Unlock powerful capabilities for your project."
         items={[
           {
             icon: (
@@ -48,7 +60,8 @@ export default async function IndexPage() {
               </svg>
             ),
             title: "Next.js 14",
-            description: "App router, Layouts, and Suspense.",
+            description:
+              "Utilize the latest features: App Router, Layouts, Suspense.",
           },
           {
             icon: (
@@ -83,7 +96,8 @@ export default async function IndexPage() {
               </svg>
             ),
             title: "Shadcn UI",
-            description: "Dark mode, layout components, and more.",
+            description:
+              "Modern and fully customizable UI components based on Tailwind CSS.",
           },
           {
             icon: (
@@ -95,30 +109,27 @@ export default async function IndexPage() {
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-12 w-12 fill-current"
               >
-                <path
-                  d="M104.004 1.78785C101.751 0.662376 99.1002 0.663161 96.8483 1.78998L4.9201 47.7892C2.21103 49.1448 0.5 51.9143 0.5 54.9436V130.526C0.5 133.556 2.2123 136.327 4.92292 137.682L96.9204 183.67C99.1725 184.796 101.823 184.796 104.075 183.67L168.922 151.246C174.242 148.587 180.5 152.455 180.5 158.402V168.855C180.5 171.885 178.788 174.655 176.078 176.01L104.077 212.011C101.825 213.137 99.1745 213.137 96.9224 212.012L12.0771 169.598C6.75791 166.939 0.5 170.807 0.5 176.754V187.048C0.5 190.083 2.21689 192.856 4.93309 194.209L97.0051 240.072C99.2529 241.191 101.896 241.191 104.143 240.07L196.071 194.21C198.785 192.857 200.5 190.084 200.5 187.052V119.487C200.5 113.54 194.242 109.672 188.922 112.332L132.078 140.754C126.758 143.414 120.5 139.546 120.5 133.599V123.145C120.5 120.115 122.212 117.345 124.922 115.99L196.078 80.4124C198.788 79.0573 200.5 76.2872 200.5 73.257V54.9468C200.5 51.9158 198.787 49.1451 196.076 47.7904L104.004 1.78785Z"
-                />
+                <path d="M104.004 1.78785C101.751 0.662376 99.1002 0.663161 96.8483 1.78998L4.9201 47.7892C2.21103 49.1448 0.5 51.9143 0.5 54.9436V130.526C0.5 133.556 2.2123 136.327 4.92292 137.682L96.9204 183.67C99.1725 184.796 101.823 184.796 104.075 183.67L168.922 151.246C174.242 148.587 180.5 152.455 180.5 158.402V168.855C180.5 171.885 178.788 174.655 176.078 176.01L104.077 212.011C101.825 213.137 99.1745 213.137 96.9224 212.012L12.0771 169.598C6.75791 166.939 0.5 170.807 0.5 176.754V187.048C0.5 190.083 2.21689 192.856 4.93309 194.209L97.0051 240.072C99.2529 241.191 101.896 241.191 104.143 240.07L196.071 194.21C198.785 192.857 200.5 190.084 200.5 187.052V119.487C200.5 113.54 194.242 109.672 188.922 112.332L132.078 140.754C126.758 143.414 120.5 139.546 120.5 133.599V123.145C120.5 120.115 122.212 117.345 124.922 115.99L196.078 80.4124C198.788 79.0573 200.5 76.2872 200.5 73.257V54.9468C200.5 51.9158 198.787 49.1451 196.076 47.7904L104.004 1.78785Z" />
               </svg>
             ),
             title: "Stack Auth",
-            description: "Login, Sign up, OAuth, User management, and more.",
+            description:
+              "Comprehensive Authentication: OAuth, User Management, and more.",
           },
           {
             icon: <Users className="h-12 w-12" />,
             title: "Multi-tenancy",
-            description: "Teams and permissions out of the box.",
+            description: "Built-in Teams and Permissions.",
           },
           {
             icon: <GitHubLogoIcon className="h-12 w-12" />,
             title: "100% Open-source",
-            description:
-              "The template and the auth server are both open-source and self-hostable.",
+            description: "Open-source and self-hostable codebase.",
           },
           {
             icon: <ComponentIcon className="h-12 w-12" />,
-            title: "Modular",
-            description:
-              "Easily extendable and customizable. No spaghetti copy-paste code.",
+            title: "Modular Design",
+            description: "Easily extend and customize. No spaghetti code.",
           },
         ]}
       />
@@ -126,12 +137,12 @@ export default async function IndexPage() {
       <div id="pricing" />
       <PricingGrid
         title="Pricing"
-        subtitle="Choose a plan that works for you."
+        subtitle="Flexible plans for every team."
         items={[
           {
             title: "Basic",
             price: "Free",
-            description: "Perfect for individuals and small projects",
+            description: "For individuals and small projects.",
             features: [
               "Full source code",
               "100% Open-source",
@@ -145,7 +156,7 @@ export default async function IndexPage() {
           {
             title: "Pro",
             price: "$0.00",
-            description: "Ideal for growing teams and businesses",
+            description: "Ideal for growing teams and businesses.",
             features: [
               "Full source code",
               "100% Open-source",
@@ -160,7 +171,7 @@ export default async function IndexPage() {
           {
             title: "Enterprise",
             price: "Still Free",
-            description: "For large organizations",
+            description: "For large organizations.",
             features: [
               "Full source code",
               "100% Open-source",
