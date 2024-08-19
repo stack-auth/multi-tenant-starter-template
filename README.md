@@ -9,7 +9,7 @@ A minimalistic Next.js starter template. Minimum setup, modular design, bring yo
 
 ## Dashboard
 
-![Dashboard](./assets/dashboard.png)
+![Dashboard](./assets/dashboard-overview.png)
 
 ## Getting Started
 
