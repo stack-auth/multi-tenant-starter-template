@@ -3,9 +3,23 @@ import { Hero } from "@/components/hero";
 import { PricingGrid } from "@/components/pricing";
 import { stackServerApp } from "@/stack";
 import { GitHubLogoIcon } from "@radix-ui/react-icons";
-import { Component, ComponentIcon, ShieldCheck, Users } from "lucide-react";
+import { ComponentIcon, Users } from "lucide-react";
 
 export default async function IndexPage() {
+  const project = await stackServerApp.getProject();
+  if (!project.config.clientTeamCreationEnabled) {
+    return <div className="w-full min-h-96 flex items-center justify-center">
+      <div className="max-w-xl gap-4">
+        <p className="font-bold text-xl">
+          Setup Guide
+        </p>
+        <p className="">
+          {'This project requires client-side team creation to be enabled. Please enable it in the Stack Auth dashboard (Project > Team Settings). This message will disappear once the feature is enabled.'}
+        </p>
+      </div>
+    </div>
+  }
+
   return (
     <>
       <Hero
