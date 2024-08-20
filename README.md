@@ -1,6 +1,6 @@
 # Stack Template
 
-A minimalistic Next.js starter template with minimal setup and a modular design. Bring your own backend and database.
+A minimalistic multi-tenant Next.js starter template with minimal setup and a modular design. Bring your own backend and database.
 
 [Demo](https://stack-template.vercel.app/)
 
