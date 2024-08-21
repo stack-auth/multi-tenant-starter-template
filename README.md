@@ -7,13 +7,13 @@ A minimalistic multi-tenant Next.js starter template with minimal setup and a mo
 ## Landing Page
 
 <div align="center">
-<img src="./assets/landing-page.png" alt="Teams" width="500"/>
+<img src="./assets/landing-page.png" alt="Teams" width="600"/>
 </div>
 
 ## Dashboard
 
 <div align="center">
-<img src="./assets/dashboard-overview.png" alt="Teams" width="500"/>
+<img src="./assets/dashboard-overview.png" alt="Teams" width="600"/>
 </div>
 
 ## Multi-tenancy (Teams)
@@ -25,7 +25,7 @@ A minimalistic multi-tenant Next.js starter template with minimal setup and a mo
 ## Account Settings
 
 <div align="center">
-<img src="./assets/account-settings.png" alt="Teams" width="400"/>
+<img src="./assets/account-settings.png" alt="Teams" width="500"/>
 </div>
 
 ## Getting Started
