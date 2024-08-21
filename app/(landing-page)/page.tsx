@@ -27,7 +27,7 @@ export default async function IndexPage() {
       <Hero
         capsuleText="100% Open-source & Free"
         capsuleLink="https://stacktemplate.com"
-        title="A Minimalistic Next.js Starter Template"
+        title="A Multi-tenant Next.js Starter Template"
         subtitle="Built for developers, by developers. Next.js + Shadcn UI + Stack Auth."
         primaryCtaText="Get Started"
         primaryCtaLink={stackServerApp.urls.signUp}
@@ -118,7 +118,7 @@ export default async function IndexPage() {
           },
           {
             icon: <Users className="h-12 w-12" />,
-            title: "Multi-tenancy",
+            title: "Multi-tenancy & RBAC",
             description: "Built-in Teams and Permissions.",
           },
           {
