@@ -39,7 +39,7 @@ A minimalistic multi-tenant Next.js starter template with minimal setup and a mo
 2. Install dependencies
 
     ```bash
-    pnpm install
+    npm install
     ```
 
 3. Register an account on [Stack Auth](https://stack-auth.com), copy the keys from the dashboard, and paste them into the `.env.local` file. Then, enable "client team creation" on the team settings tab.
@@ -49,7 +49,7 @@ A minimalistic multi-tenant Next.js starter template with minimal setup and a mo
 4. Start the development server and go to [http://localhost:3000](http://localhost:3000)
 
     ```bash
-    pnpm dev 
+    npm dev 
     ```
 
 ## Features & Tech Stack
