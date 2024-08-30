@@ -1,14 +1,14 @@
 "use client";
 
 import { cn } from "@/lib/utils";
+import { useStackApp, useUser } from "@stackframe/stack";
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
 import { useSelectedLayoutSegment } from "next/navigation";
 import * as React from "react";
+import { ColorModeSwitcher } from "./color-mode-switcher";
 import { Logo } from "./logo";
 import { Button, buttonVariants } from "./ui/button";
-import { ColorModeSwitcher } from "./color-mode-switcher";
-import { useStackApp, useUser } from "@stackframe/stack";
 
 interface NavProps {
   items?: {
@@ -19,8 +19,28 @@ interface NavProps {
   }[];
 }
 
-function AuthButtons() {
+function SignInSignUpButtons() {
   const app = useStackApp();
+  return (
+    <>
+      <Link
+        href={app.urls.signIn}
+        className={buttonVariants({ variant: "secondary" })}
+      >
+        Sign In
+      </Link>
+
+      <Link
+        href={app.urls.signUp}
+        className={buttonVariants({ variant: "default" })}
+      >
+        Sign Up
+      </Link>
+    </>
+  );
+}
+
+function AuthButtonsInner() {
   const user = useUser();
 
   if (user) {
@@ -33,24 +53,16 @@ function AuthButtons() {
       </Link>
     );
   } else {
-    return (
-      <>
-        <Link
-          href={app.urls.signIn}
-          className={buttonVariants({ variant: "secondary" })}
-        >
-          Sign In
-        </Link>
-
-        <Link
-          href={app.urls.signUp}
-          className={buttonVariants({ variant: "default" })}
-        >
-          Sign Up
-        </Link>
-      </>
-    );
+    return <SignInSignUpButtons />;
   }
+}
+
+function AuthButtons() {
+  return (
+    <React.Suspense fallback={<SignInSignUpButtons />}>
+      <AuthButtonsInner />
+    </React.Suspense>
+  );
 }
 
 function MobileItems(props: NavProps) {
