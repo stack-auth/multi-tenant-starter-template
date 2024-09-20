@@ -49,7 +49,7 @@ A minimalistic multi-tenant Next.js starter template with minimal setup and a mo
 4. Start the development server and go to [http://localhost:3000](http://localhost:3000)
 
     ```bash
-    npm dev 
+    npm run dev 
     ```
 
 ## Features & Tech Stack

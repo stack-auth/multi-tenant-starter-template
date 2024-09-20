@@ -80,7 +80,7 @@ export default async function IndexPage() {
                   stroke="currentColor"
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                  stroke-width="22"
+                  strokeWidth="22"
                 ></line>
                 <line
                   x1="192"
@@ -91,7 +91,7 @@ export default async function IndexPage() {
                   stroke="currentColor"
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                  stroke-width="22"
+                  strokeWidth="22"
                 ></line>
               </svg>
             ),
